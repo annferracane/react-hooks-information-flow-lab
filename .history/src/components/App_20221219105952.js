@@ -12,7 +12,13 @@ function App() {
 
   return (
     <div className={"App " + (isDarkMode ? "dark" : "light")}>
-      <Header isDarkMode={isDarkMode} onDarkModeClick={onDarkModeClick}/>
+      <Header></Header>
+      <header>
+        <h2>Shopster</h2>
+        <button onClick={onDarkModeClick}>
+          {isDarkMode ? "Dark" : "Light"} Mode
+        </button>
+      </header>
       <ShoppingList items={itemData} />
     </div>
   );
